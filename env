@@ -1,4 +1,4 @@
-REACT_APP_ES_API=http://localhost:17700/api
+VITE_APP_ES_API=http://localhost:17700/api
 ES_INDEX=elastiflix-movies
 ES_HOST=https://es_host_here.es.us-east-1.aws.elastic.cloud:443
 ES_API_KEY=api_key_here
