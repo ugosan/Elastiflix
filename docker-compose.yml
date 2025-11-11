@@ -20,7 +20,6 @@ services:
     ports:
       - "17700:17700"
     environment:
-      - LOCAL=true
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
     env_file:
