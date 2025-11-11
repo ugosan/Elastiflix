@@ -30,10 +30,9 @@ function SearchPage() {
     alwaysSearchOnInitialLoad: true,
 
     searchQuery: {
-      search_fields: {  
-        title: { weight: 2 },
-        overview: {},
-        plot: {}
+      search_fields: {
+        title: {},
+        overview: {}
       },
       disjunctiveFacets: ["genres"],
       resultsPerPage: 10,

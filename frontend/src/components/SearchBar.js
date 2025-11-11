@@ -22,17 +22,9 @@ function SearchBar() {
     const history = useHistory();
 
     const configurationOptions = {
-        apiConnector: connector, // Use the shared connector
+        apiConnector: connector, 
         trackUrlState: false,
-        alwaysSearchOnInitialLoad: false,
-        autocompleteQuery: {
-            results: {
-                resultsPerPage: 5,
-                result_fields: {
-                    title: { snippet: { size: 100, fallback: true }}
-                }
-            }
-        }
+        alwaysSearchOnInitialLoad: false
     };
 
     return (
@@ -44,16 +36,6 @@ function SearchBar() {
                 onSubmit={searchTerm => {
                     history.push("/search?q=" + searchTerm);
                     window.location.href = "/search?q=" + searchTerm;
-                }}
-                autocompleteMinimumCharacters={2}
-                autocompleteResults={{
-                    sectionTitle: "Results",
-                    titleField: "title",
-                }}
-                onSelectAutocomplete={(selection) => {
-                    if (selection.title) {
-                        window.location.href = "/search?q=" + selection.title.raw;
-                    }
                 }}
             />
         </SearchProvider>
