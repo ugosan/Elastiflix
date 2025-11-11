@@ -2,17 +2,13 @@ FROM node:23-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . .
 
 # Install dependencies
-RUN npm install --force
-
-RUN npx update-browserslist-db@latest
-
-COPY . .
+RUN yarn install
 
 # Expose port 3000
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "run", "start"]
+CMD ["yarn", "dev"]

@@ -3,9 +3,6 @@ import {
 } from "@elastic/react-search-ui";
 import connector from "../services/SearchConnector";
 import { SearchBox, Sorting } from "@elastic/react-search-ui";
-import {
-  EuiIcon,
-} from '@elastic/eui';
 
 import Results from "./Results"
 import Nav from "./Nav"
@@ -13,7 +10,7 @@ import Nav from "./Nav"
 const renderInput = ({ getAutocomplete, getInputProps, getButtonProps }) => {
   return (
     <div className="search-box">
-      <EuiIcon className="search-box__icon" type="search" />
+      <span className="search-box__icon">🔍</span>
       <input
         {...getInputProps({
           className: "search-box__input",

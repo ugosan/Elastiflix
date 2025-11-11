@@ -1,6 +1,6 @@
 import { ApiProxyConnector } from "@elastic/search-ui-elasticsearch-connector/api-proxy";
 const connector = new ApiProxyConnector({
-  basePath: process.env.REACT_APP_ES_API+"/semantic",
+  basePath: import.meta.env.VITE_APP_ES_API+"/semantic",
   fetchOptions: {
     credentials: "include" 
   }

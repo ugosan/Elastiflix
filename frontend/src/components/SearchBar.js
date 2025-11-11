@@ -1,12 +1,11 @@
 import { SearchProvider, SearchBox } from "@elastic/react-search-ui";
-import { EuiIcon } from '@elastic/eui';
 import { useHistory } from "react-router-dom";
 import connector from '../services/SearchConnector'; // Import the shared connector
 
 const renderInput = ({ getAutocomplete, getInputProps }) => {
     return (
         <div className="search-box">
-            <EuiIcon className="search-box__icon" type="search" />
+            <span className="search-box__icon">🔍</span>
             <input
                 {...getInputProps({
                     className: "search-box__input",
