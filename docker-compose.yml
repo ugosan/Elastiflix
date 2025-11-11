@@ -6,7 +6,8 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-      - REACT_APP_ES_API=http://localhost:17700/api
+    env_file:
+      - ./env
     volumes:
       - ./frontend/src:/app/src
     depends_on:
@@ -20,8 +21,7 @@ services:
       - LOCAL=true
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-      - ES_HOST=https://es_host_here.es.us-east-1.aws.elastic.cloud:443
-      - ES_API_KEY=api_key_here
-      - ES_INDEX=elastiflix-movies
+    env_file:
+      - ./env
     volumes:
       - ./backend/src:/app/src
