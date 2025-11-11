@@ -3,3 +3,4 @@ src/data-loader/env-debug
 node_modules/
 data-loader/movies/tmp/
 *.local
+.github
